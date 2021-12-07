@@ -1,0 +1,72 @@
+:root {
+    --cargeseblue: #7BA8D7;
+    --cargesegray: #999999;
+    --cargeselightgray: #BBBBBB;
+}
+
+#logo {
+    width: 100%;
+}
+
+h1 {
+    font-family: AmatiSC;
+    font-size: 60px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--cargeseblue);
+    text-align: center;
+}
+
+h1 span {
+    color: black;
+}
+
+a {
+    border-bottom: 1px dashed var(--cargesegray);
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cargeseblue);
+}
+
+p, li {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.place {
+    font-family: AmatiSC;
+    font-size: 36px;
+    text-align: center;
+}
+
+.date {
+    font-family: AmatiSC;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: -0.5em;
+}
+
+.quote {
+    text-align: right;
+    font-style: italic;
+    color: var(--cargesegray);
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--cargeseblue);
+}
+
+@font-face {
+    font-family: AmatiSC;
+    src: url(../fonts/AmaticSC-Regular.ttf);
+}
+
+.topcontainer {
+    margin-top: 60px;
+}
