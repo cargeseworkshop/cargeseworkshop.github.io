@@ -121,11 +121,45 @@
       <div class="row">
         <div class="seven columns">
           <h2>Schedule</h2>
-          <p>There will be morning and afternoon sessions. Morning sessions will be dedicated to longer survey-type talks or open problems. The afternoon sessions will be dedicated to discussions as well as shorter talks on related topics. In their spare time, we encourage researchers to enjoy the beautiful landscape and opportunities of the island, besides solving a few open problems.</p>
+          <p>There will be morning and afternoon sessions. Morning sessions will be dedicated to longer survey-type talks or open problems. The afternoon sessions will be dedicated to discussions as well as shorter talks on related topics.</p>
+          <p>In their spare time, we encourage researchers to enjoy the beautiful landscape and opportunities of the island, besides solving a few open problems.</p>
           <p>A <a href="schedule.pdf">detailed schedule</a> is available <a href="schedule.pdf">here</a>.</p>
         </div>
         <div class="five columns">
           <img src="../images/chairs.jpg" alt="Chairs with view on sea at Cargese" class="impression">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h2>Talks</h2>
+          <h3>Lectures</h3>
+          <ul>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Guantao Chen – The Goldberg-Seymour Conjecture on edge-coloring of multigraphs</a>
+              <p class="hideme">Given a multigraph G = (V,E), the edge-coloring problem (ECP) is to color the edges of G with the minimum number of colors so that no two adjacent edges have the same color. This problem can be naturally formulated as an integer program, and its linear programming relaxation is referred to as the fractional edge-coloring problem (FECP). The optimal value of ECP (resp. FECP) is called the chromatic index (resp. fractional chromatic index) of G, denoted by χ′(G) (resp. χ*(G)). Let Δ(G) be the maximum degree of G and let ω*(G) be the density of G, defined by ω*(G) = max{2|E(U)| / (|U|-1) : U ⊆ V, |U|≥ 3 and odd} where E(U) is the set of all edges of G with both ends in U. Clearly, max{Δ(G), ⌈ω*(G)⌉} is a lower bound for χ′(G). As shown by Seymour, χ*(G) = max{Δ(G), ω*(G)}. In the early 1970s Goldberg and Seymour independently conjectured that χ′(G) ≤ max{Δ(G) + 1, ⌈ω*(G)⌉}. Over the past five decades this conjecture, a cornerstone in modern edge-coloring, has been a subject of extensive research, and has stimulated an important body of work. This outstanding conjecture was recently confirmed by Guangming Jing, Wenan Zang and the speaker. Our result implies that, first, there are only two possible values for χ′(G), so an analogue to Vizing’s theorem on edge-colorings of simple graphs holds for multigraphs; second, although it is NP-hard in general to determine χ′(G), we can approximate it within one of its true value, and find it exactly in polynomial time when ω(G) > Δ(G); third, every multigraph G satisfies χ′(G) - χ*(G) ≤ 1, and thus FECP has a fascinating integer rounding property.
+<br>
+<br>
+This lecture consists of three talk. In the first talk, I will give a brief survey of the history and previous progress on this conjecture. In the second talk, I will focus on the proof methods and techniques of this conjecture. In the third talk, I will provide several consequences of the conjecture and its generalization form in f-coloring of weighted graphs.</p>
+            </li>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Gérard Cornuéjols – Optimization, Packing and Covering</a>
+              <p class="hideme">
+              In the first lecture (Overview), we introduce the notion of clutters, blocking theory, Lehman's characterization of ideal clutters, the packing property, the replication conjecture, the tau=2 conjecture and several recent results in the area.<br>
+              <br>
+              In the second lecture (Woodall's conjecture), we introduce the notions of a dicut and a dijoin in a directed graph, the Lucchesi-Younger theorem as well as recent developments on Woodall's conjecture. In particular we present recent results obtained jointly with Ahmad Abdi and Michael Zlatin.<br>
+              <br>
+              In the third lecture (Seymour's conjecture), we present an intriguing conjecture of Seymour on packing members of an ideal clutter. We show that the conjecture holds in two special cases in joint work with Ahmad Abdi, Bertrand Guenin and Levent Tuncel in one instance, and with Ahmad Abdi and Zuzana Palion in the other instance.</p>
+            </li>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Lisa Sauermann – Extension complexity of low-dimensional polytopes</a>
+              <p class="hideme">In these lectures, based on joint work with Matthew Kwan and Yufei Zhao, we discuss several results concerning the extension complexity of various families of low-dimensional polytopes. First, for a fixed dimension d, we consider random d-dimensional polytopes (obtained as the convex hull of random points in a ball or on a sphere) and show that their extension complexity is typically on the order of the square root of its number of vertices. Second, we prove that any cyclic n-vertex polygon (whose vertices lie on a circle) has extension complexity at most 24 sqrt(n). This bound is tight up to the constant factor 24. The lectures will introduce the relevant background, and explain (most of) the proofs of these results.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -231,5 +265,14 @@
   </div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    function toggleSchedule(el) {
+      el.nextElementSibling.classList.toggle("hideme");
+    }
+
+    function toggleAbstract(el) {
+      el.nextElementSibling.classList.toggle("hideme");
+    }
+  </script>
 </body>
 </html>
