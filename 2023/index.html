@@ -205,80 +205,116 @@ Finally, Part 3 will cover applied techniques for integrating machine learning i
             </li>
           </ul>
 
-<!--
           <h3>Contributed talks</h3>
           <ul>
             <li>
-On the power of graph neural networks and the role of the activation function
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Sammy Khalife – </a>
-              <p class="hideme"> In this talk I will present new results about the expressivity of Graph Neural Networks (GNNs), answering an open question formulated by [Grohe, 2021]. For any GNN with piecewise polynomial activations and whose architecture size does not grow with the graph input sizes, there exists a pair of non-isomorphic rooted trees of depth two such that the GNN cannot distinguish their root vertex up to an arbitrary number of iterations. The proof relies on the algebra of symmetric polynomials. In contrast, it was already known that unbounded GNNs (those whose size is allowed to change with the graph sizes) with piecewise polynomial activations can distinguish these vertices in only two iterations. Our results imply a strict separation between bounded and unbounded size GNNs.</br>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Eric Balkanski – Strategyproof Scheduling with Predictions
+</a>
+              <p class="hideme"> 
+In their seminal paper that initiated the field of algorithmic mechanism design, Nisan and Ronen (STOC 99) studied the problem of designing strategyproof mechanisms for scheduling jobs on unrelated machines aiming to minimize the makespan. They provided a strategyproof mechanism that achieves an $n$-approximation and they made the bold conjecture that this is the best approximation achievable by any deterministic strategyproof scheduling mechanism. After more than two decades and several efforts, n remains the best known approximation and very recent work by Christodoulou et al (FOCS 21) has been able to prove an $\Omega(\sqrt{n})$-approximation lower bound for all deterministic strategyproof mechanisms. This strong negative result, however, heavily depends on the fact that the performance of these mechanisms is evaluated using worst-case analysis. To overcome such overly pessimistic, and often uninformative, worst-case bounds, a surge of recent work has focused on the ``learning-augmented framework'', whose goal is to leverage machine-learned predictions to obtain improved approximations when these predictions are accurate (consistency), while also achieving near-optimal worst-case approximations even when the predictions are arbitrarily wrong (robustness).
+In this work, we study the classic strategic scheduling problem of Nisan and Ronen using the learning-augmented framework and give a deterministic polynomial-time strategyproof mechanism that is $6$-consistent and $2n$-robust. We thus achieve the ``best of both worlds'': an $O(1)$ consistency and an $O(n)$ robustness that asymptotically matches the best-known approximation. We then extend this result to provide more general worst-case approximation guarantees as a function of the prediction error. Finally, we complement our positive results by showing that any $1$-consistent deterministic strategyproof mechanism has unbounded robustness.
 
-If one allows activations that are not piecewise polynomial, then in two iterations a single neuron perceptron can distinguish the root vertices of any pair of non-isomorphic trees of depth two (our results hold for activations like the sigmoid, hyperbolic tan and others). This shows how the power of graph neural networks can change drastically if one changes the activation function of the neural networks. The proof of this result utilizes the Lindemann-Weierstrass theorem from transcendental number theory.
+</p>
+            </li>
 
-Link to article: <a href="https://arxiv.org/abs/2307.04661"/>https://arxiv.org/abs/2307.04661</p>.
-            </li>
             <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Laura Vargas Koch – Techniques for generalized colorful k-center problems</a>
-              <p class="hideme">One appealing way of integrating fairness aspects into classical clustering problems is by introducing multiple covering constraints. While prior techniques assume covering constraints on the clients, they do not address additional constraints on the facilities, which has been extensively studied in non-colorful settings. In this talk, we present a framework to deal with various constraints on the facilities in the colorful setting. To exemplify our framework, we show how it leads, to a O(2^\gamma)-approximation for Colorful Matroid Supplier with respect to a linear matroid. Joint work with Georg Anegg and Rico Zenklusen (published at ESA 22).</p>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Marek Eliáš – Learning-Augmented Algorithms with Explicit Predictors
+</a>
+              <p class="hideme"> 
+In the field of algorithmic design, there has been recent progress in
+utilizing predictions from machine learning models applied to the input data
+(or historical data). These approaches have demonstrated an enhancement in
+performance when the predictions are accurate, while also ensuring robustness
+by providing worst-case guarantees when predictions fail. </br>
+
+In this manuscript we focus on online problems; prior research in this
+context has generally treated the machine learning algorithm as a black-box
+with unspecified training methods. In contrast, in this work, we unpack the
+algorithm and examine the learning problem it gives rise to, with the
+ultimate goal of designing online learning algorithms specifically tailored
+for the algorithmic task at hand. Adopting this perspective, we turn our
+attention to a number of fundamental problems, including caching and
+scheduling, which have been well-studied in the black-box setting.  For each
+of the problems we consider, we introduce new algorithms that take advantage
+of explicit learning algorithms which we carefully design towards optimizing
+the overall perfor- mance. We demonstrate the potential of our approach by
+deriving performance bounds that show improvement over those established in
+previous work.</br>
+
+Joint work with Haim Kaplan, Yishay Mansour, Shay Moran.
+</p>
             </li>
+
+<li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Stefano Leonardi – Learning Pricing Mechanisms for Trading
+ </a>
+              <p class="hideme"> 
+ The bilateral trade problem models a two-sided market with both buyers and
+sellers acting strategically. An ideal goal in bilateral trade is to maximize
+the social welfare of buyers and sellers with individually rational (IR),
+incentive compatible (IC), and budget-balanced mechanisms (BB), which
+requires that the mechanism does not subsidize the market or make an
+arbitrary profit from the exchange. Unfortunately, Myerson and Satterthwaite
+proved in 1983 that this goal cannot be achieved even in the Bayesian setting
+and for the simple case of only one buyer and one seller. Meaningful
+trade-offs and algorithmic approximations of the above requirements have
+recently been proposed under the often-unrealistic assumption that the
+agents' priors are perfectly known beforehand.  I focus in this talk on
+learning pricing mechanisms that achieve near-optimal approximations with one
+single sample from each distribution, the minimum amount of information
+required to achieve any positive result, and online learning mechanisms that
+achieve optimal regret bounds with no prior information while interacting
+with the agents in a sequence of repeated bilateral trade rounds. 
+</p>
+</li>
+
             <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Jens Vygen – Packing cycles in planar and bounded-genus graphs</a>
-              <p class="hideme">We devise constant-factor approximation algorithms for finding as many disjoint cycles as possible from a certain family of cycles in a given planar or bounded-genus graph. Here disjoint can mean vertex-disjoint or edge-disjoint, and the graph can be undirected or directed. The family of cycles under consideration must be uncrossable and allow for a certain oracle access. Our setting generalizes many problems that were studied separately in the past. Among our corollaries are the first constant-factor approximation algorithm for vertex-disjoint paths in fully planar instances and approximate min-max theorems of the Erdős-Pósa type. This is joint work with Niklas Schlomberg and Hanjo Thiele (arXiv:2207.00450).</p>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Sammy Khalife – On the power of graph neural networks and the role of the activation function
+</a>
+              <p class="hideme"> In this talk I will present new results about the expressivity of Graph Neural Networks (GNNs), answering an open question formulated by Grohe (LICS 2021). For any GNN with piecewise polynomial activations and whose architecture size does not grow with the graph input sizes, there exists a pair of non-isomorphic rooted trees of depth two such that the GNN cannot distinguish their root vertex up to an arbitrary number of iterations. The proof relies on the algebra of symmetric polynomials. In contrast, it was already known that unbounded GNNs (those whose size is allowed to change with the graph sizes) with piecewise polynomial activations can distinguish these vertices in only two iterations. Our results imply a strict separation between bounded and unbounded size GNNs.</br>
+
+If one allows activations that are not piecewise polynomial, then in two iterations a single neuron perceptron can distinguish the root vertices of any pair of non-isomorphic trees of depth two (our results hold for activations like the sigmoid, hyperbolic tan and others). This shows how the power of graph neural networks can change drastically if one changes the activation function of the neural networks. The proof of this result utilizes the Lindemann-Weierstrass theorem from transcendental number theory.</br>
+
+Link to article: <a href="https://arxiv.org/abs/2307.04661"/>https://arxiv.org/abs/2307.04661</a>.
+</p>
             </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Katharina Eickhoff – Computing Walrasian Prices via Matroid Partitioning</a>
-              <p class="hideme">We consider two-sided matching markets in which indivisible distinguishable goods are sold to a set of buyers with individual valuation functions over sets of bundles. Item prices which admit a distribution of items to buyers such that every buyer receives a preferred bundle are called Walrasian  equilibrium prices. In 1982, Kelso and Crawford proposed a gross substitute condition for the existence of Walrasian equilibrium prices. Gul and Stacchetti showed in 1999 that they can  be computed by an ascending auction which starts with all-zero prices and  iteratively increases the prices on overdemanded sets until the prices are Walrasian. Murota et al. gave combinatorial algorithms for computing Walrasian equilibria by using the theory of discrete convexity. In this talk, we show that minimal Walrasian prices can be computed via the matroid partitioning algorithm. Structural insights obtained from this algorithm allow us to derive sensitivity results regarding possible changes in supply and demand. Joint work with Britta Peis, Niklas Rieken, and Laura Vargas Koch.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Manuel Aprile – The role of rationality in integer-programming relaxations</a>
-              <p class="hideme">Given a finite set X of integer points, a relaxation of X is a polyhedron whose integer points are exactly those of X. The relaxation complexity of X is the smallest number of facets of a relaxation of X. In this article, we focus on X being the vertex set of the standard simplex, which consists of the null vector and the standard unit vectors. We show that, for dimension d at least 5, the relaxation complexity of X is at most d. This answer an open question of Kaibel and Weltge, implying that irrational relaxations can be smaller than rational ones (indeed, the best rational relaxation of X is the standard simplex itself, with d+1 facets). Moreover, we improve our bound showing that the relaxation complexity of X is asymptotically sublinear.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Andras Sebo – A re-citation on Tashkinov trees</a>
-              <p class="hideme"></p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Andreas Wiese – A PTAS for Unsplittable Flow on a Path</a>
-              <p class="hideme">In the Unsplittable Flow on a Path problem (UFP) we are given a path with edge capacities, and a set of tasks where each task is characterized by a subpath, a demand, and a weight. The goal is to select a subset of tasks of maximum total weight such that the total demand of the selected tasks using each edge $e$ is at most the capacity of $e$. The problem admits a QPTAS [Bansal, Chakrabarti, Epstein, Schieber, STOC'06; Batra, Garg, Kumar, M{\"o}mke, Wiese, SODA'15]. After a long sequence of improvements [Bansal, Friggstad, Khandekar, Salavatipour, SODA'09; Bonsma, Schulz, Wiese, FOCS'11; Anagnostopoulos, Grandoni, Leonardi, Wiese, SODA'14; Grandoni, M{\"o}mke, Wiese, Zhou, STOC'18], the best known polynomial time approximation algorithm for UFP has an approximation ratio of $1+\frac{1}{e+1}+\eps < 1.269$ [Grandoni, M{\"o}mke, Wiese, SODA'22]. It has been an open question whether this problem admits a PTAS.  In this paper, we solve this open question and present a polynomial time $(1+\eps)$-approximation algorithm for UFP. Joint work with Fabrizio Grandoni and Tobais Mömke.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Nicole Megow – Online Routing and Network Design with Predictions</a>
-              <p class="hideme">"Online optimization refers to solving problems where an initially unknown input is revealed incrementally, and irrevocable decisions must be made not knowing future requests. The assumption of not having any prior knowledge about future requests seems overly pessimistic. Given the success of machine-learning methods and data-driven applications, one may expect to have access to predictions about future requests. However, simply trusting them might lead to very poor solutions as these predictions come with no quality guarantee. In this talk we present recent developments in the young line of research that integrates such error-prone predictions into algorithm design to break through worst case barriers. We discuss algorithmic challenges with a focus on online routing and network design and present algorithms with performance guarantees depending on a novel error metric. Joint work with Giulia Bernardini, Alexander Lindermayr, Alberto Marchetti-Spaccamela, Leen Stougie, and Michelle Sweering.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Alex Black – Small Shadows of Lattice Polytopes</a>
-              <p class="hideme">For 75 years, the simplex method has remained one of the most popular methods for solving linear programs, yet much still remains mysterious about its performance. Geometrically, the simplex method optimizes a linear function by tracing a path on the oriented graph of a polyhedron, and the simplex method may only run quickly if this graph has small diameter. It is a fundamental open question to understand whether polyhedra are guaranteed to have polynomially bounded diameters. However, even in cases in which we know bounds on diameters, actually following such short paths with the simplex method has continued to be an additional challenge. I will talk about my recent joint work with Jesús De Loera, Sean Kafer, and Laura Sanità on finding pivot rules for the simplex method guaranteed to match the theoretical best possible bound on diameters for 0/1-polytopes as well as my work on nearly matching the best known bounds for lattice polytopes.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Volker Kaibel – Steiner Cut Dominants</a>
-              <p class="hideme">For a subset of terminals T of the nodes of a graph G a cut in G is called a T-Steiner cut if it subdivides T into two non-empty sets. The Steiner cut dominant of G is the Minkowski sum of the convex hull of the incidence vectors of T-Steiner cuts in G and the nonnegative orthant. It is the polyhedron that is naturally associated with the problem of finding a minimum T-Steiner cut in G w.r.t. nonnegative edge weights. While it is well understood for two terminals (s-t-cuts), for larger sets T no inequality descriptions have been known so far despite quite some efforts that have been spent into investigating this problem for T being the complete node set of G (global cuts). In this talk we derive such descriptions for all graphs and up to five terminals. Moreover, we prove that for each number k there is a finite list of inequalities from which one can derive by means of iterated applications of two simple operations inequality descriptions of the Steiner cut dominant for every graph and up to k terminals. We furthermore introduce the concept of the Steiner rank of a facet of a global cut dominant and classify the facets of Steiner rank at most five. Via blocking duality those results yield corresponding results for the vertices of the subtour elimination polytope that is most relevant in the context of the traveling salesman problem.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Jose Verschae – A Characterization of Symmetry Breaking Inequalities based on Vector Orderings</a>
-              <p class="hideme">"When solving integer linear programs (ILPs), it is common to face problems subject to symmetries. Usual IP techniques struggle with highly symmetric instances if they are not addressed appropriately. Breaking symmetries is arguably the simplest way of speeding up such methods for symmetric ILPs. However, there might be several non-equivalent ways of breaking symmetries, so it is relevant to understand the geometric differences between constructions. In this talk I will show how the theory of vector orderings relates to symmetry breaking and how this connection conceptually simplifies the construction of symmetry-breaking inequalities found in the literature. We will be able to characterize all constructions of minimal symmetry breaking sets (i.e. fundamental domains) that arise from vector orderings by showing that, in essence, all such sets arise from choosing lexicographically minimal representative of symmetric points (after a corresponding change of basis). We will finish with several conjectures and open questions.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Sophie Huiberts – Diameter of random polytopes</a>
-              <p class="hideme">The (combinatorial) diameter diam(P) of a polytope P is the maximum shortest path distance between any pair of vertices. We provide upper and lower bounds on the combinatorial diameter of a random "spherical" polytope, which is tight to within one factor of dimension when the number of inequalities is large compared to the dimension. More precisely, for an n-dimensional polytope P defined by the intersection of m i.i.d. half-spaces whose normals are chosen uniformly from the sphere, we show diam(P) is between Omega(n m^{1/(n-1)}) and O(n^2 m^{1/(n-1)} + n^5 4^n) with high probability when m > 2^Omega(n). In this talk, I will prove a simpler lower bound and sketch how to derive the upper bound from this lower bound.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Bento Natura – Interior point methods are not worse than Simplex</a>
-              <p class="hideme">Whereas interior point methods provide polynomial-time linear programming algorithms, the running time bounds depend on bit-complexity or condition measures that can be unbounded in the problem dimension. This is in contrast with the simplex method that always admits an exponential bound. We introduce a new polynomial-time path-following interior point method where the number of iterations also admits a combinatorial upper bound O(2^n n^{1.5} log n) for an n-variable linear program in standard form. This complements previous work by Allamigeon, Benchimol, Gaubert, and Joswig (SIAGA 2018) that exhibited a family of instances where any path-following method must take exponentially many iterations. The number of iterations of our algorithm is at most O(n^{1.5} log n) times the number of segments of any piecewise linear curve in the wide neighborhood of the central path. In particular, it matches the number of iterations of any path following interior point method up to this polynomial factor. The overall exponential upper bound derives from studying the `max central path', a piecewise-linear curve with the number of pieces bounded by the total length of 2n shadow vertex simplex paths. Our algorithm falls into the family of layered least squares interior point methods introduced by Vavasis and Ye (Math. Prog. 1996). In contrast to previous layered least squares methods that partition the kernel of the constraint matrix into coordinate subspaces, our method creates layers based on a general subspace providing more flexibility. Our result also implies the same bound on the number of iterations of the trust region interior point method by Lan, Monteiro, and Tsuchiya (SIOPT 2009). This is joint work with Xavier Allamigeon, Daniel Dadush, Georg Loho, and László Végh.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Christoph Hertrich – ReLU Neural Networks of Polynomial Size for Exact Maximum Flow Computation</a>
-              <p class="hideme">In line with recent research studying neural networks with rectified linear units (ReLUs) from a polyhedral point of view, we pose the following question about this fundamental machine learning model: Which (continuous and piecewise linear) functions can exactly be represented by a ReLU neural network of polynomial size? In order to study this question, we propose to view neural networks as a model of (real-valued!) computation and investigate the complexity of different problems in this model. Specifically, we show that there exist polynomial-size neural networks (i) to compute the value of a minimum spanning tree from given edge weights in a graph, and (ii) to compute a maximum s-t-flow from given arc capacities in a flow network. These results imply in particular that the respective problems can be solved with strongly polynomial time algorithms that solely use affine transformations and maxima computations, but no conditional branchings. This is joint work with Leon Sering (ETHZ).</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Kristof Berczi – Paths consisting of short edges in matroid intersection polytopes</a>
-              <p class="hideme">Let M be a matroid and let M* denote its dual. A conjecture of White states that for any two vertices of the common basis polytope of M and M*, there exists a path between them containing only short edges. Here an edge between two vertices B and B' is called short if B'=B-e+f, that is, B' can be obtained from B by a single exchange. The conjecture was shown to hold for graphic, lattice path, strongly base orderable, and frame matroids, but it is open in general. Hamidoune formulated an even more optimistic conjecture stating that not only the above-mentioned path exists, but its length can be bounded by the rank of the matroid. This was proved for transversal matroids, but remained open even e.g. for sparse paving matroids. We verify the conjecture for split matroids, a class that was motivated by the study of matroid polytopes from a tropical geometry point of view.</p>
-            </li>
-            <li>
-              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Thomas Rothvoß – Approximate CVP in time $2^{0.802n}$ - now in any norm!</a>
-              <p class="hideme">We show that a constant factor approximation of the shortest and closest lattice vector problem in any norm can be computed in time $2^{0.802n}$. This contrasts the corresponding $2^n$ time, (gap)-SETH based lower bounds for these problems that even apply for small constant approximation. For both problems, SVP and CVP, we reduce to the case of the Euclidean norm. A key technical ingredient in that reduction is a twist of Milman's construction of an $M$-ellipsoid which approximates any symmetric convex body $K$ with an ellipsoid $E$ so that $2^{\varepsilon n}$ translates of a constant scaling of $E$ can cover $K$ and vice versa. This is joint work with Moritz Venzin.</p>
-            </li>
-          </ul>
-        </div>
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;"> Christoph Hertrich -
+Neural Networks and Extension Complexity
+</a>
+<p class="hideme"> 
+The smallest known extended formulation for the spanning tree polytope has size $O(n^3)$. The smallest known (ReLU) neural network optimizing over the spanning tree polytope has size $O(n^3)$, too. Is this a coincidence? More generally, we ask whether any interesting relation between the extension complexity of a polytope and the minimum size of a neural network optimizing over the polytope can be proven. We report on progress towards answering this question by showing the following. If a neural network with $N$ neurons solves the optimization problem over a polytope P, then there exist two polytopes $Q$ and $R$ with extension complexity at most $2N$ each such that $R$ is the Minkowski sum of $P$ and $Q$. This implies that an optimal solution to the optimization problem over $P$ can be obtained as the difference of optimal solutions to the optimization problems of $R$ and $Q$, respectively (with appropriate tie-breaking).</br>
+
+This is work in progress with Sam Fiorini, Georg Loho, and László Végh.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Axel Parmentier - Combinatorial optimization layers in deep learning pipelines provide efficient policies for dynamic combinatorial optimization problems </a>
+<p class="hideme"> 
+The 2022 EURO-NeurIPS challenge (1) on dynamic vehicle routing highlighted the difficulties of multistage stochastic optimization problems whose state and decision spaces are discrete and combinatorially large. Multistage stochastic optimization policies do not scale, while reinforcement learning approaches have difficulties with the combinatorial decisions. We suggested using a combinatorial optimization layer in a deep learning pipeline : a deep neural network takes in input the state of the system and returns as output the parameters of a deterministic vehicle routing problem, which we solve with a classic combinatorial optimization heuristic to obtain the decision. It seems to overcome the difficulties above and enabled to win the challenge with a three percent margin. The approach requires a learning algorithm to choose the parameters of the neural network. The results of the challenge startled the winning team and opened a scientific question because the learning algorithm used should not have worked. Indeed, it imitated the anticipative policy, which is known to perform poorly in multi-stage stochastic optimization. In this talk, we use tools from combinatorial optimization, reinforcement learning, and multi-stage stochastic optimization to reinterpret the learning algorithm, understand why it worked on the problem of the challenge and fails on others, and introduce better learning algorithms for policies based on combinatorial optimization layers. We illustrate the performance of these algorithms on several dynamic routing problems. In particular, we significantly improve the performance of the policy used to win the challenge.</br>
+(1) <a href="https://euro-neurips-vrp-2022.challenges.ortec.com/">EURO Meets NeurIPS 2022
+Vehicle Routing Competition</a>.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Bissan Ghaddar – Learning for Spatial Branching: An Algorithm Selection Approach </a>
+<p class="hideme"> 
+The use of machine learning techniques to improve the performance of branch-and-bound optimization algorithms is a very active area in the context of mixed integer linear problems, but little has been done for non-linear optimization. To bridge this gap, we develop a learning framework for spatial branching and show its efficacy in the context of the Reformulation-Linearization Technique for polynomial optimization problems. The proposed learning is performed offline, based on instance-specific features and with no computational overhead when solving new instances. Novel graph-based features are introduced, which turn out to play an important role in the learning. Experiments on different benchmark instances from the literature show that the learning-based branching rule significantly outperforms the standard rules.
+</p>
+</li>
+
+</ul>
+</div>
+
+<!--
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Name – Title </a>
+<p class="hideme"> 
+
+</p>
+</li>
 -->
 
 <!--
