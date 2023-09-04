@@ -151,7 +151,7 @@ about 25 min, and the IGESA resort is a 10-15 min walk from the ferry.
           <p>There will be morning and afternoon sessions. Morning sessions will be dedicated to longer survey-type talks or open problems. The afternoon sessions will be dedicated to discussions as well as shorter talks on related topics.</p>
           <p>In their spare time, we encourage researchers to enjoy the beautiful landscape and opportunities of the island, besides solving a few open problems.</p>
 
-          <p>The preliminary schedule can be found here: <a href="schedule.pdf">preliminary schedule</a>.</p>
+          <p>The workshop schedule can be found here: <a href="schedule.pdf">schedule</a>.</p>
 <!--
           <p>A <a href="schedule.pdf">detailed schedule</a> is available <a href="schedule.pdf">here</a>.</p>
 -->
@@ -211,7 +211,7 @@ Finally, Part 3 will cover applied techniques for integrating machine learning i
               <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Eric Balkanski – Strategyproof Scheduling with Predictions
 </a>
               <p class="hideme"> 
-In their seminal paper that initiated the field of algorithmic mechanism design, Nisan and Ronen (STOC 99) studied the problem of designing strategyproof mechanisms for scheduling jobs on unrelated machines aiming to minimize the makespan. They provided a strategyproof mechanism that achieves an $n$-approximation and they made the bold conjecture that this is the best approximation achievable by any deterministic strategyproof scheduling mechanism. After more than two decades and several efforts, n remains the best known approximation and very recent work by Christodoulou et al (FOCS 21) has been able to prove an $\Omega(\sqrt{n})$-approximation lower bound for all deterministic strategyproof mechanisms. This strong negative result, however, heavily depends on the fact that the performance of these mechanisms is evaluated using worst-case analysis. To overcome such overly pessimistic, and often uninformative, worst-case bounds, a surge of recent work has focused on the ``learning-augmented framework'', whose goal is to leverage machine-learned predictions to obtain improved approximations when these predictions are accurate (consistency), while also achieving near-optimal worst-case approximations even when the predictions are arbitrarily wrong (robustness).
+In their seminal paper that initiated the field of algorithmic mechanism design, Nisan and Ronen (STOC '99) studied the problem of designing strategyproof mechanisms for scheduling jobs on unrelated machines aiming to minimize the makespan. They provided a strategyproof mechanism that achieves an $n$-approximation and they made the bold conjecture that this is the best approximation achievable by any deterministic strategyproof scheduling mechanism. After more than two decades and several efforts, n remains the best known approximation and very recent work by Christodoulou et al (FOCS '21) has been able to prove an $\Omega(\sqrt{n})$-approximation lower bound for all deterministic strategyproof mechanisms. This strong negative result, however, heavily depends on the fact that the performance of these mechanisms is evaluated using worst-case analysis. To overcome such overly pessimistic, and often uninformative, worst-case bounds, a surge of recent work has focused on the ``learning-augmented framework'', whose goal is to leverage machine-learned predictions to obtain improved approximations when these predictions are accurate (consistency), while also achieving near-optimal worst-case approximations even when the predictions are arbitrarily wrong (robustness).
 In this work, we study the classic strategic scheduling problem of Nisan and Ronen using the learning-augmented framework and give a deterministic polynomial-time strategyproof mechanism that is $6$-consistent and $2n$-robust. We thus achieve the ``best of both worlds'': an $O(1)$ consistency and an $O(n)$ robustness that asymptotically matches the best-known approximation. We then extend this result to provide more general worst-case approximation guarantees as a function of the prediction error. Finally, we complement our positive results by showing that any $1$-consistent deterministic strategyproof mechanism has unbounded robustness.
 
 </p>
@@ -237,7 +237,7 @@ attention to a number of fundamental problems, including caching and
 scheduling, which have been well-studied in the black-box setting.  For each
 of the problems we consider, we introduce new algorithms that take advantage
 of explicit learning algorithms which we carefully design towards optimizing
-the overall perfor- mance. We demonstrate the potential of our approach by
+the overall performance. We demonstrate the potential of our approach by
 deriving performance bounds that show improvement over those established in
 previous work.</br>
 
@@ -271,7 +271,7 @@ with the agents in a sequence of repeated bilateral trade rounds.
             <li>
               <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Sammy Khalife – On the power of graph neural networks and the role of the activation function
 </a>
-              <p class="hideme"> In this talk I will present new results about the expressivity of Graph Neural Networks (GNNs), answering an open question formulated by Grohe (LICS 2021). For any GNN with piecewise polynomial activations and whose architecture size does not grow with the graph input sizes, there exists a pair of non-isomorphic rooted trees of depth two such that the GNN cannot distinguish their root vertex up to an arbitrary number of iterations. The proof relies on the algebra of symmetric polynomials. In contrast, it was already known that unbounded GNNs (those whose size is allowed to change with the graph sizes) with piecewise polynomial activations can distinguish these vertices in only two iterations. Our results imply a strict separation between bounded and unbounded size GNNs.</br>
+              <p class="hideme"> In this talk I will present new results about the expressivity of Graph Neural Networks (GNNs), answering an open question formulated by Grohe (LICS '21). For any GNN with piecewise polynomial activations and whose architecture size does not grow with the graph input sizes, there exists a pair of non-isomorphic rooted trees of depth two such that the GNN cannot distinguish their root vertex up to an arbitrary number of iterations. The proof relies on the algebra of symmetric polynomials. In contrast, it was already known that unbounded GNNs (those whose size is allowed to change with the graph sizes) with piecewise polynomial activations can distinguish these vertices in only two iterations. Our results imply a strict separation between bounded and unbounded size GNNs.</br>
 
 If one allows activations that are not piecewise polynomial, then in two iterations a single neuron perceptron can distinguish the root vertices of any pair of non-isomorphic trees of depth two (our results hold for activations like the sigmoid, hyperbolic tan and others). This shows how the power of graph neural networks can change drastically if one changes the activation function of the neural networks. The proof of this result utilizes the Lindemann-Weierstrass theorem from transcendental number theory.</br>
 
@@ -302,6 +302,63 @@ Vehicle Routing Competition</a>.
 <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Bissan Ghaddar – Learning for Spatial Branching: An Algorithm Selection Approach </a>
 <p class="hideme"> 
 The use of machine learning techniques to improve the performance of branch-and-bound optimization algorithms is a very active area in the context of mixed integer linear problems, but little has been done for non-linear optimization. To bridge this gap, we develop a learning framework for spatial branching and show its efficacy in the context of the Reformulation-Linearization Technique for polynomial optimization problems. The proposed learning is performed offline, based on instance-specific features and with no computational overhead when solving new instances. Novel graph-based features are introduced, which turn out to play an important role in the learning. Experiments on different benchmark instances from the literature show that the learning-based branching rule significantly outperforms the standard rules.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Merve Bodur – Neural Approximate Dynamic Programming for the Ultra-fast Delivery Problem </a>
+<p class="hideme"> 
+The same-day delivery (SDD) services necessitate optimized operational efficiency, especially for the two sub-tasks of order assignment/dispatching and vehicle routing. We consider the ultra-fast delivery variant of SDD, where the critical time constraints make the real-time decision-making particularly challenging. We propose a neural approximate dynamic programming (NeurADP) approach for this problem, a hybrid methodology combining approximate dynamic programming (ADP) and deep reinforcement learning (DRL). This work constitutes the first application of NeurADP beyond its original context of the ride-pooling problem, extending its versatility in solving real-world, dynamic, discrete optimization problems. NeurADP integrates neural network-based value function approximations into integer programming models solved in the ADP algorithm in an efficient way via a two-step decomposition approach, and also it performs a more general Bellman update via the DRL connection. Our extensive numerical experiments demonstrate the benefits of the NeurADP approach, with generated policies outperforming various DRL and myopic policies. Detailed sensitivity analysis further confirms effectiveness of the NeurADP policies under varying operational constraints.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Andrea Lodi – Structured Pruning of Neural Networks for Constraint Learning </a>
+<p class="hideme"> 
+ In recent years, the integration of Machine Learning (ML) models with Operation Research (OR) tools has gained popularity across diverse applications, including cancer treatment, algorithmic configuration, and chemical process optimization. In this domain, the combination of ML and OR often relies on representing the ML model output using Mixed Integer Programming (MIP) formulations. Numerous studies in the literature have developed such formulations for many ML predictors, with a particular emphasis on Artificial Neural Networks (ANNs) due to their significant interest in many applications. However, ANNs frequently contain a large number of parameters, resulting in MIP formulations that are impractical to solve, thereby impeding scalability. In fact, the ML community has already introduced several techniques to reduce the parameter count of ANNs without compromising their performance, since the substantial size of modern ANNs presents challenges for ML applications as it significantly impacts computational efforts during training and necessitates significant memory resources for storage. In this paper, we showcase the effectiveness of pruning, one of these techniques, when applied to ANNs prior to their integration into MIPs. By pruning the ANN, we achieve significant improvements in the speed of the solution process. We discuss why pruning is more suitable in this context compared to other ML compression techniques, and we identify the most appropriate
+pruning strategies. To highlight the potential of this approach, we conduct experiments using feed-forward neural networks with multiple layers to construct adversarial examples. Our results demonstrate that pruning offers remarkable reductions in solution times without hindering the quality of the final decision, enabling the resolution of previously unsolvable instances.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Emiliano Traversi – Clique Merging Algorithms to Solve SemidefiniteRelaxations of Optimal Power Flow Problems </a>
+<p class="hideme"> 
+Semidefinite Programming (SDP) is a powerful technique to compute tight lower bounds for Optimal Power Flow (OPF) problems. Even using clique decomposition techniques, semidefinite relaxations are still computationally demanding. However, there are many different clique decompositions for the same SDP problem and they are not equivalent in terms of computation time. In this paper, we propose a new strategy to compute efficient clique decompositions with a clique merging heuristic. This heuristic is based on two different estimates of the computational burden of an SDP problem: the size of the problem and an estimation of a per-iteration cost for a state-of-the-art interior-point algorithm. We compare our strategy with other algorithms on MATPOWER instances and we show a significant decrease in solver time. In the last part of the talk we present recent developments on how to incorporate machine learning techniques to automatically identify effective clique decompositions.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Sander Borst –  Node selection in branch-and-bound, using the explorable heap problem
+ </a>
+<p class="hideme"> 
+The branch-and-bound algorithm has two important ingredients, a branching rule and a node selection rule.
+The latter has not been studied much from a theoretical point of view. We study node selection rules, using the explorable heap model.
+In this model, proposed by Karp, Saks and Widgerson (FOCS '86), the goal is to find a node selection rule that minimizes the amount of movement of the solver head through the branch-and-bound tree.
+This problem can be formulated in a very simple way: How many steps does an agent need to find the nth smallest number in a heap if the agent can only learn a number by visiting the corresponding node in the tree.
+We provide a new randomized algorithm for this problem that substantially improves upon the best previously known algorithm. This algorithm implies a new node selection rule for branch-and-bound.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Afrouz Jabal Ameli – $4/3$-approximation for two node connectivity </a>
+<p class="hideme"> 
+The $2$-Vertex-Connected Spanning Subgraph problem (2VCSS) is among the most basic NP-hard (Survivable) Network Design problems: we are given an (unweighted) undirected graph $G$. Our goal is to find a subgraph $S$ of $G$ with the minimum number of edges which is $2$-vertex-connected, namely $S$ remains connected after the deletion of an arbitrary node. 2VCSS is well-studied in terms of approximation algorithms, and the current best (polynomial-time) approximation factor is $10/7$ by Heeger and Vygen (SIDMA '17) (improving on earlier results by Khuller and Vishkin (STOC '92) and Garg, Vempala and Singla (SODA '93)).
+</p>
+</li>
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Thomas Rothvoss – The Subspace Flatness Conjecture and Faster Integer Programming </a>
+<p class="hideme"> 
+In a seminal paper, Kannan and Lovász (Annals of Math. '88) considered a quantity $\mu_{KL}(\Lambda,K)$
+which denotes the best volume-based lower bound on the <i>covering radius</i> $\mu(\Lambda,K)$ of a convex
+body $K$ with respect to a lattice $\Lambda$. Kannan and Lov\'asz proved that $\mu(\Lambda,K) \leq n \cdot \mu_{KL}(\Lambda,K)$ and the Subspace Flatness Conjecture by Dadush (2012) claims a $O(\log n)$ factor suffices, which would match
+the lower bound from the work of Kannan and Lovász.
+We settle this conjecture up to a constant in the exponent by proving that  $\mu(\Lambda,K) \leq O(\log^{3}(n)) \cdot \mu_{KL} (\Lambda,K)$. Our proof is
+based on the Reverse Minkowski Theorem due to Regev and Stephens-Davidowitz (STOC '17, Annals of Math. '23).
+Following the work of Dadush (2012, STOC '19), we obtain a $(\log n)^{O(n)}$-time randomized algorithm to
+solve integer programs in $n$ variables.
+Another implication of our main result is a near-optimal \emph{flatness constant} of $O(n \log^{4}(n))$.</br>
+  
+This is joint work with Victor Reis.
 </p>
 </li>
 
