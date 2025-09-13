@@ -9,6 +9,28 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/custom.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+   <!-- Mathjax
+   ------------------------------------------------- -->
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
 </head>
 <body>
   <div>
@@ -58,9 +80,9 @@
         <div class="twelve columns">
           <h2>Distinguished speakers</h2>
           <ul>
-            <li><a href="http://rasmuskyng.com/">Rasmus Kyng (ETH)</a></li>
-            <li><a href="https://mitmgmtfaculty.mit.edu/hlu/">Haihao Lu (MIT)</a></li>
-            <li><a href="https://bentonatura.com/">Bento Natura (Columbia)</a> </li>
+            <li><a href="http://rasmuskyng.com/">Rasmus Kyng (ETH)</a>: <i>TBD.</i> </li>
+            <li><a href="https://mitmgmtfaculty.mit.edu/hlu/">Haihao Lu (MIT)</a>: <i> An Overview of GPU-Based First-Order Methods for Linear Programming and Beyond.</i> </li> 
+            <li><a href="https://bentonatura.com/">Bento Natura (Columbia)</a>: <i>The Combinatorics of Interior Point Methods for Linear Programming.</i> </li>
           </ul>
         </div>
       </div>
@@ -96,9 +118,9 @@
       <div class="row">
         <div class="seven columns">
           <h2>Schedule</h2>
-          <p>There will be morning and afternoon sessions. Morning sessions will be dedicated to longer survey-type talks or open problems. The afternoon sessions will be dedicated to discussions as well as shorter talks on related topics.</p>
+          <p>There will be morning and afternoon sessions. Morning sessions will be dedicated to longer survey-type talks or open problems. The afternoon sessions will be dedicated to discussions as well as shorter talks on related topics. In the evenings on Tuesday and Thursday, we will have a session for open problems and lightning talks. </p>
           <p>In their spare time, we encourage researchers to enjoy the beautiful landscape and opportunities of the island, besides solving a few open problems.</p>
-          <!-- <p>A <a href="schedule.pdf">detailed schedule</a> is available <a href="schedule.pdf">here</a>.</p> -->
+           <p>A detailed schedule is available <a href="schedule.pdf">here</a>.</p>
         </div>
         <div class="five columns">
           <img src="../images/chairs.jpg" alt="Chairs with view on sea at Cargese" class="impression">
@@ -119,6 +141,180 @@
     </div>
   </div>
   -->
+
+  <div>
+    <div class="container">
+      <div class="row">
+
+        <div class="twelve columns">
+          <h2>Talks</h2>
+          <h3>Lectures</h3>
+          <ul>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Rasmus Kyng – Fast Flow Algorithms: Combinatorial Interior Point Methods and Graph Data Structures
+ </a>
+              <p class="hideme">
+My first lecture will be on the Combinatorial Interior Point Method (CIPM) for solving linear programs, and the second lecture on Min-Ratio Cycle Data Structures that are used to implement the CIPM for minimum-cost flow. The third lecture will be on the Dual/Cut CIPM, data structures for cut-updates, and partially dynamic flow problems.</br>
+
+An additional (optional) tutorial session on "Dynamic Edge and Vertex Distance
+Sparsification", building on the content of this lecture series, will be given
+by Aurelio Sulser and Simon Meierhans on Tuesday from 15:15pm-16:15pm.
+</p>
+            </li>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Haihao Lu – An Overview of GPU-Based First-Order Methods for Linear Programming and Beyond </a>
+              <p class="hideme"> 
+The rapid advancement of GPU computing has transformed numerous fields, yet its impact on mathematical programming, including linear programming (LP) and beyond, remains an actively evolving research area. In this lecture, we aim to provide an overview of recent developments in GPU-accelerated solvers, with a primary focus on first-order methods (FOMs) for LP and their extensions. We begin by outlining the fundamental differences between CPU and GPU architectures and presenting a numerical study on the speedup achieved by GPUs over CPUs for key numerical linear algebra operations that serve as bottlenecks for various optimization algorithms. Next, we discuss how to design FOMs for problems like LP from the ground up. We then introduce the newly developed LP solvers PDLP, cuPDLP, and cuPDLPx, describing practical enhancements that improve numerical performance, along with a summary of numerical studies comparing cuPDLPx to commercial solvers. This is followed by an in-depth discussion of the theoretical foundations of the primal-dual hybrid gradient (PDHG) method, which serves as the base algorithm for PDLP. We present a simplified and unified perspective on PDHG, including a basic convergence analysis, and explore its connections with non-expansive operators, leading to a principal understanding of the algorithm. Furthermore, we examine the sharpness property of LP, a key characteristic that enables the linear convergence of PDHG. We discuss optimal linear convergence, infeasibility detection, and Halpern acceleration, followed by a summary of condition-number-based analyses. Finally, we review recent progress in GPU-based solvers for quadratic and semidefinite programming, highlighting broader advancements in large-scale optimization with GPUs.
+</p>
+            </li>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Bento Natura – The Combinatorics of Interior Point Methods for Linear Programming </a>
+             <p class="hideme">
+This tutorial introduces Straight Line Complexity, a geometric quantity that characterizes the number of iterations required by specialized Interior Point Methods to solve Linear Programs exactly. We analyze this complexity measure for several key classes of LPs, including Minimum Cost Flows, Markov Decision Processes, and two-variable-per-inequality systems, illustrating its role in combinatorial optimization. We will also touch on algorithmic aspects and initialization techniques that preserve combinatorial structure.
+</p>
+            </li>
+          </ul>
+
+          <h3>Contributed Talks</h3>
+          <ul>
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Eleon Bach – Optimal Smoothed Analysis of the Simplex Method</a>
+              <p class="hideme"> 
+Smoothed analysis is a method for analysing the performance of algorithms, used especially for those algorithms whose running time in practice is significantly better than what can be proven through worst-case analysis and which have significant structure such that average case analysis remains inconclusive. Given an arbitrary linear program with $d$ variables and $n$ inequality constraints, we prove that there exists a simplex method whose smoothed complexity is upper bounded by $O(\sigma^{-1/2} d^{11/4} \log(n)^{7/4})$ pivot steps. Furthermore, we prove a matching high-probability lower bound of $\Omega( \sigma^{-1/2} d^{1/2}\ln(4/\sigma)^{-1/4})$ on the combinatorial diameter of the feasible polyhedron after smoothing, on instances using $n = \lfloor (4/\sigma)^d \rfloor$ inequality constraints. This lower bound indicates that our algorithm has optimal noise dependence among all simplex methods, up to polylogarithmic factors.
+In this talk we will discuss the algorithmic improvements that we used for the above new upper bound. </br>
+
+This is joint work with Sophie Huiberts.
+</p>
+            </li>
+
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Alexander Black – Circuit Augmentation in Fixed Dimension</a>
+              <p class="hideme"> 
+Circuit augmentation algorithms for linear programming are generalizations of the simplex method that have garnered recent attention due to being both combinatorial and having polynomial run-time guarantees. Circuit augmentation follows a sequence of discrete steps along the boundary of a polytope until converging on the optimum by following a path along so-called circuit directions called a circuit walk. However, the choices of circuit walks are numerous, and a key bottleneck for studying circuit augmentation schemes is the computational problem of finding short circuit walks. In this talk, I will show that finding a shortest circuit walk is NP-Hard already for polygons, and as a consequence of our proof, finding an $O(n^(1-\epsilon))$-approximation of a shortest circuit walk is NP-Hard for any $\epsilon > 0$ for a polyhedron defined by n inequalities. </br>
+
+This is based on joint work with Christian Nöbel and Raphael Steiner.
+
+</p>
+            </li>
+
+<li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Adrian Vladu – TBD</a>
+              <p class="hideme"> 
+TBD.
+</p>
+</li>
+
+            <li>
+              <a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Yang P. Liu - TBD</a>
+              <p class="hideme"> TBD. </br>
+
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Shunhua Jiang - Generalized Flow in Nearly-linear Time on Moderately Dense Graphs </a>
+<p class="hideme"> 
+In this talk, we consider generalized flow problems where there is an $m$-edge $n$-node directed graph $G = (V,E)$ and each edge $e \in E$ has a loss factor $\gamma_e >0$ governing whether the flow is increased or decreased as it crosses edge $e$. We provide a randomized $\tilde{O}( (m + n^{1.5}) \cdot \mathrm{poly} \log(\frac{W}{\delta}))$ time algorithm for generalized maximum flow and generalized minimum cost flow in this setting where $\delta$ is the target accuracy and $W$ is the maximum of all costs, capacities, and loss factors and their inverses.
+This improves upon the previous state-of-the-art $\tilde{O}(m \sqrt{n} \cdot \log^2(\frac{W}{\delta}) )$ time algorithm, obtained by combining the algorithm of [Daitch-Spielman 2008] with techniques from [Lee-Sidford 2014].
+To obtain this result we provide new dynamic data structures and spectral results regarding the matrices associated to generalized flows and apply them through the interior point method framework of [Brand-Lee-Liu-Saranurak-Sidford-Song-Wang 2021].
+</br>
+
+Based on joint work with Michael Kapralov, Lawrence Li, and Aaron Sidford.
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Sorrachai Yingchareonthawornchai – TBD </a>
+<p class="hideme"> 
+TBD. </br>
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;"> Aaron Sidford - The Complexity of Solving Matrix Games </a>
+<p class="hideme"> 
+Matrix games are a fundamental class of bilinear optimization problems and perhaps some of the simplest non-trivial minimax optimization problems. Nevertheless, matrix games are pervasive and encompass well-studied, prominent algorithmic challenges including linear programming and finding a maximum-margin linear classifier. In this talk I will survey recent advances in understanding the complexity of approximately solving matrix games. In addition, this talk will introduce recent, new efficient algorithms for efficiently solving certain matrix games developed in joint work with Ishani Karmarkar and Liam O'Carroll. </br>
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Robert M. Freund - The Role of Level-Set Geometry on the Performance of PDHG for Conic Convex Optimization</a>
+<p class="hideme"> 
+We consider solving huge-scale instances of (convex) conic linear optimization problems, at the scale where matrix-factorization-free methods are attractive or necessary. The restarted primal-dual hybrid gradient method (rPDHG)—with heuristic enhancements and GPU implementation—has been very successful in solving these huge-scale LP problems; however, its performance can have substantial variance, and an intuitive understanding of the drivers of its performance has been lacking. We present a new theoretical analysis of rPDHG for general (convex) conic linear optimization and for LP as a special case thereof. We show a relationship between geometric measures of the primal-dual (sub-)level sets and the convergence rate of rPDHG. We then specialize our results to the case of LP with unique optima.  Under unique optima, we present an iteration bound that is “accessible” in the sense that computing the bound is no more difficult than computing the optimal solution itself. This furthermore enables an analysis of the “two-stage performance” of rPDHG: we present a bound on the number of iterations of the first stage (which identifies the optimal basis), and also a bound on the second stage (which computes a nearly-optimal solution). Furthermore, computational tests mostly confirm the tightness of these iteration bounds. We also show a reciprocal relation between the iteration bounds and three equivalent types of condition measures: (i) stability under data perturbation, (ii) proximity to multiple optima, and (iii) the LP sharpness of the instance. </br>
+
+This is joint work with Zikai Xiong.
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Tommasso d'Orsi - TBD </a>
+<p class="hideme"> 
+TBD.
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;"> Jiaye Wei - Robustness of Matching: Backup Nodes Problem
+ </a>
+<p class="hideme"> 
+We study the following problem on the robustness of matching. Consider a bipartite graph with parts $A$ and $B$. We assume that $B$ has a larger size than $A$ and that the graph has an $A$-perfect matching. The goal is to find an $A$-perfect matching such that the number of nodes in $A$ which has a neighbor in the unsaturated nodes of $B$, is maximized; in other words, we want the maximum number of $A$ nodes to have “backup nodes”. A related problem is studied in the setting of second bidder auctions with binary bids by Azar, Birnbaum, Karlin, and Nguyen in 2009. In that problem, the condition of finding a perfect matching is relaxed but every $A$ nodes in the matching is required to have backup nodes. In this talk, I will first explain a tight $(1-1/e)$ approximation for the general Backup Nodes problem via submodular maximization. I will also introduce the results for the degree-constrained case, including a polynomial-time exact algorithm for $(d,2)$-regular graphs and the APX-hardness for graphs with small degrees.</br>
+
+This is joint work with Rom Pinchasi, Neta Singer, and Lukas Vogl.
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Katharina Eickhoff - On the Approximability of Train Routing and the Min-Max Disjoint Paths Problem </a>
+<p class="hideme"> 
+In train routing, the headway is the minimum distance that must be maintained between successive trains for safety and robustness. We introduce a model for train routing that requires a fixed headway to be maintained between trains, and study the problem of minimizing the makespan, i.e., the arrival time of the last train, in a single-source single-sink network. For this problem, we first show that there exists an optimal solution where trains move in convoys – that is, the optimal paths for any two trains are either the same or are arc-disjoint. 
+
+
+While min-max disjoint paths inherits a strong inapproximability result on directed acyclic graphs from the multi-level bottleneck assignment problem, we show that a natural greedy composition approach yields a logarithmic approximation in the number of disjoint paths for series-parallel graphs. 
+We also present an alternative analysis of this approach that yields a guarantee depending on how often the decomposition tree of the series-parallel graph alternates between series and parallel compositions on any root-leaf path.</br>
+
+This is joint work with Umang Bhaskar, Lennart Kauther, Jannik Matuschke, Britta Peis and Laura Vargas Koch.
+</p> </li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;"> Sarah Morell - Unsplittable Transshipments</a>
+<p class="hideme"> 
+We consider an arc-capacitated directed graph $D=(V,A)$, where each node $v$ is associated with a rational balance value $b(v)$. Nodes with negative balance values are referred to as sources, while those with positive balance values are called sinks. A feasible $b$-transshipment is a flow that routes the total supply from the sources to the sinks through the digraph $D$, while respecting the given arc capacity constraints and satisfying the balance requirements at each node. An unsplittable $b$-transshipment additionally requires that the flow from each specific source to each sink is routed along at most one path. Given a feasible $b$-transshipment, our objective is to compute an unsplittable $b$-transshipment without exceeding the arc capacities by more than the maximum balance value.
+
+This problem generalizes the well-studied single source unsplittable flow problem, introduced by Kleinberg in 1996. In a seminal paper published 25 years ago, Dinitz, Garg and Goemans proved that, given an instance of the single source unsplittable flow problem, any feasible flow can be transformed into an unsplittable one without exceeding the arc capacities by more than the maximum demand value. In this talk, we present an adaptation of the Dinitz-Garg-Goemans algorithm to the more general setting of unsplittable transshipments. More precisely, we show how, given a feasible $b$-transshipment, one can efficiently compute an unsplittable $b$-transshipment while ensuring that no arc capacity is exceeded by more than the maximum balance value. </br>
+
+This is joint work with Srinwanti Debgupta and Martin Skutella.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;"> Zhuan Khye Koh - Approximating the Held–Karp Bound for Metric TSP in Nearly Linear Work and Polylogarithmic Depth </a>
+<p class="hideme"> 
+In this talk, I will present a nearly linear work parallel approximation scheme
+for the Held–Karp bound for metric TSP. Given an edge-weighted graph G with $m$
+edges and $\epsilon > 0$, it returns a $(1+\epsilon)$-approximation to the
+Held–Karp bound with high probability, in $\tilde{O}(m/\epsilon^4)$ work and
+$\tilde{O}(1/\epsilon^4)$ depth.
+</br>
+
+Joint work with Sorrachai Yingchareonthawornchai and Omri Weinstein.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">Tamás Schwartz - Couplings and Tensor Products of Matroids and Submodular Functions</a>
+<p class="hideme"> 
+The tensor product of two matroids is a natural extension of the tensor product from linear algebra. However, Las Vergnas showed that two matroids do not necessarily admit such a product. Inspired by the concept of coupling in probability theory, we introduce the notion of coupling for matroids, and more generally for submodular set functions. This operation relaxes the tensor product and, in contrast, always exists: any two matroids or submodular functions admit a coupling. We further reveal a close connection between the existence of tensor products and matroid representability over skew fields, which in turn leads to new linear rank inequalities. 
+
+Based on joint works with Kristóf Bérczi,  Boglárka Gehér,  András Imolay,  László Lovász, Balázs Maga, and Carles Padró.
+</p>
+</li>
+
+<li>
+<a title="Show abstact" href="#" onclick="toggleAbstract(this);return false;">László Végh - Matroids are Equitable</a>
+<p class="hideme"> 
+We show that if the ground set of a matroid can be partitioned into $k \geq 2$ bases, then for any given subset $S$ of the ground set, there is a partition into $k$ bases such that the sizes of the intersections of the bases with 
+S may differ by at most one. This settles the matroid equitability conjecture by Fekete and Szabó from 2011 in the affirmative. We also present results on near-equal splittings of two disjoint set, and derive applications to matroid constrained fair division problems. This is joint work with Hannaneh Akrami and Roshan Raj.
+</p>
+</li>
+
+</ul>
+</div>
+      </div>
+    </div>
+  </div>
 
   <div>
     <div class="container">
@@ -235,4 +431,14 @@
     </div>
   </div>
 </body>
+
+  <script>
+    function toggleSchedule(el) {
+      el.nextElementSibling.classList.toggle("hideme");
+    }
+
+    function toggleAbstract(el) {
+      el.nextElementSibling.classList.toggle("hideme");
+    }
+  </script>
 </html> 
