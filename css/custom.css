@@ -89,3 +89,16 @@ h3 {
 .hideme {
   display: none;
 }
+
+footer {
+    color: gray;
+}
+
+footer a {
+    color: gray;
+}
+
+footer p {
+    margin-top: 1em;
+    text-align: center;
+}
